@@ -2,6 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class c_account extends CI_Controller {
+	public function __construct() {
+        parent::__construct();
+        // Memuat model Data_model
+        $this->load->model('Data_model');
+    }
 	public function c_check()
 	{
 
@@ -43,7 +48,7 @@ class c_account extends CI_Controller {
 		public function c_login()
 	{
 
-		$data['info']=$this->data_model->select_user();
+		$data['info']=$this->Data_model->select_user();
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('username', 'نام کاربری',
         'required|alpha_dash');
@@ -109,7 +114,7 @@ class c_account extends CI_Controller {
 				move_uploaded_file($_FILES['file']['tmp_name'], "images/uploads/".$file_name);
 			}
 
-		 $this->data_model->insert_post($_SESSION['person_id'],$_POST['title'],$_POST['price'],$_POST['year'],$_POST['university'],$file_name,$_POST['jumpMenu']);
+		 $this->Data_model->insert_post($_SESSION['person_id'],$_POST['title'],$_POST['price'],$_POST['year'],$_POST['university'],$file_name,$_POST['jumpMenu']);
         $this->c_postsuccess();
 	}
  }

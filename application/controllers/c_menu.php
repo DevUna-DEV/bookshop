@@ -2,6 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class c_menu extends CI_Controller {
+	public function __construct() {
+        parent::__construct();
+        // Memuat model Data_model
+        $this->load->model('Data_model');
+    }
 
 
 	public function about()
