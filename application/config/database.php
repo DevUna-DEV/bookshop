@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'book',
+	'hostname' => 'sql300.infinityfree.com',
+	'username' => 'if0_37693572',
+	'password' => 'veOMtbO8oQO9l',
+	'database' => 'if0_37693572_bookstore',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => TRUE,
