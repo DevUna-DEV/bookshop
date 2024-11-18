@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class data_model extends CI_Model {
+class Data_model extends CI_Model {
 	public function insert_data($username,$password,$link)
 	{
 		  $sql="insert ignore into person(username,password,link)
