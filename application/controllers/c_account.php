@@ -29,7 +29,7 @@ class c_account extends CI_Controller {
 			$this->load->view('register');
 		}else{
 			
-				$this->data_model->insert_data($_POST['username'],md5($_POST['password']),$_POST['_link']);
+				$this->Data_model->insert_data($_POST['username'],md5($_POST['password']),$_POST['_link']);
 				header("location:http://localhost:81/CI_book/index.php/c_menu/login?usersucsse=2");
        }
 	}
